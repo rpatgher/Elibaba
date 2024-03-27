@@ -1,0 +1,142 @@
+
+// ************ Components ************
+import Header from "../components/Header/Header";
+import SwiperVapes from "../components/Swiper/SwiperVapes";
+import SearchBar from "../components/SeachBar/SeachBar"
+
+// ************ Styles ************
+import "../styles/Home.css";
+
+const VAPES_POPULAR = [
+    {
+        id: 1,
+        name: "Mint",
+        image: "./img/Mint.png",
+        price: "250",
+        color: "#30BEE1"
+    },
+    {
+        id: 2,
+        name: "Aloe Grape",
+        image: "./img/Aloe_Grape.png",
+        price: "250",
+        color: "#AB48F8"
+    },
+    {
+        id: 3,
+        name: "Blueberry Raspberry",
+        image: "./img/Blueberry_Raspberry.png",
+        price: "250",
+        color: "#225AE4"
+    },
+    {
+        id: 4,
+        name: "Grape Pear",
+        image: "./img/Grape_Pear.png",
+        price: "250",
+        color: "#eac704"
+    }
+];
+
+const VAPES_IPLAY = [
+    {
+        id: 1,
+        name: "Mint",
+        image: "./img/Mint.png",
+        price: "250",
+        color: "#30BEE1"
+    },
+    {
+        id: 2,
+        name: "Aloe Grape",
+        image: "./img/Aloe_Grape.png",
+        price: "250",
+        color: "#AB48F8"
+    },
+    {
+        id: 9,
+        name: "Watermelon Bubble Gum",
+        image: "./img/Watermelon_Bubble_Gum.png",
+        price: "250",
+        color: "#DDDCE8"
+    },
+    {
+        id: 3,
+        name: "Blueberry Raspberry",
+        image: "./img/Blueberry_Raspberry.png",
+        price: "250",
+        color: "#225AE4"
+    },
+    {
+        id: 5,
+        name: "Lemon Berry",
+        image: "./img/Lemon_Berry.png",
+        price: "250",
+        color: "#eac704"
+    },
+    {
+        id: 7,
+        name: "Sour Apple",
+        image: "./img/Sour_Apple.png",
+        price: "250",
+        color: "#89DF76"
+    },
+    {
+        id: 8,
+        name: "Strawberry Litchy",
+        image: "./img/Strawberry_litchy.png",
+        price: "250",
+        color: "#E37AF1"
+    },
+    {
+        id: 6,
+        name: "Pinapple",
+        image: "./img/Pinapple.png",
+        price: "250",
+        color: "#F0BF3C"
+    },
+    {
+        id: 4,
+        name: "Grape Pear",
+        image: "./img/Grape_Pear.png",
+        price: "250",
+        color: "#eac704"
+    }
+];
+
+const VAPES_WAKA = [];
+
+
+const Home = () => {
+    return (
+        <>
+            <Header />
+            <div className="body">
+                <SearchBar />
+                <div className="subtitle">
+                    <h2>Popular</h2>
+                    <p>Ver más</p>
+                </div>
+                <SwiperVapes 
+                    vapes={VAPES_POPULAR}
+                />
+                <div className="subtitle">
+                    <h2>IPLAY</h2>
+                    <p>Ver más</p>
+                </div>
+                <SwiperVapes 
+                    vapes={VAPES_IPLAY}
+                />
+                <div className="subtitle">
+                    <h2>Waka</h2>
+                    <p>Ver más</p>
+                </div>
+                <SwiperVapes 
+                    vapes={VAPES_WAKA}
+                />
+            </div>
+        </>
+    )
+}
+
+export default Home;

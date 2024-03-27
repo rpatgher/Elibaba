@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo-name{
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.actions i{
+    cursor: pointer;
+}

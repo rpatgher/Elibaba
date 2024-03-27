@@ -1,0 +1,18 @@
+.body{
+    background-color: var(--background);
+    padding: 4rem 0;
+}
+.subtitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 95%;
+}
+.subtitle h2{
+    margin: 0;
+}
+.subtitle p{
+    margin: 0;
+}

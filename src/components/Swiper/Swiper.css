@@ -1,0 +1,19 @@
+.slide img{
+    width: 15rem;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.main .swiper{
+    padding: 0;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: visible;
+    transition: background-color .3s ease-in-out;
+}
