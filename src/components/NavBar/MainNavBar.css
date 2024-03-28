@@ -32,3 +32,50 @@
     width: 60px;
     height: auto;
 }
+
+.cart-panel {
+    position: fixed; /* Posicionamiento fijo */
+    top: 0; /* Desde el borde superior */
+    right: 0; /* Alineado a la derecha para deslizarse desde ese lado */
+    width: 33.33%; /* Ancho del panel como 1/3 del ancho de la ventana */
+    height: 100vh; /* Altura completa de la vista */
+    background-color: #fff; /* Fondo blanco o el color que prefieras */
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2); /* Sombra suave para darle profundidad */
+    padding: 20px; /* Espaciado interior */
+    z-index: 101; /* Asegúrate de que sea mayor que el de .navbar para que se muestre por encima */
+    transition: transform 0.3s ease-in-out; /* Transición suave al abrir/cerrar */
+    transform: translateX(100%); /* Oculta el panel por defecto */
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-panel.open {
+    transform: translateX(0); /* Muestra el panel */
+}
+
+
+.close-btn {
+    position: absolute; /* Posiciona el botón respecto a su contenedor relativo más cercano */
+    top: 10px; /* Espacio desde la parte superior del panel */
+    right: 10px; /* Espacio desde el lado derecho del panel */
+    border: none; /* Remueve el borde del botón */
+    background: none; /* Fondo transparente */
+    font-size: 1.5rem; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+/* Opcional: Estilos para el hover del botón */
+.close-btn:hover {
+    color: #cc0000; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+/* Otros estilos existentes... */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+    z-index: 50; /* Menor que el z-index del panel del carrito para que aparezca detrás */
+}
