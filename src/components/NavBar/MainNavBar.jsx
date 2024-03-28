@@ -5,7 +5,7 @@ const MainNavBar = () => {
         <div className="navbar">
             <h1 className="logo-name">Elibaba</h1>
             <div className="logo-image">
-                Elibaba Logo
+                <img src="./img/Elibabalogo.png" alt="" />
             </div>
             <div className="actions">
                 <i className="fa-solid fa-cart-shopping"></i>

@@ -27,3 +27,8 @@
 .actions i{
     cursor: pointer;
 }
+
+.logo-image{
+    width: 60px;
+    height: auto;
+}
