@@ -240,8 +240,11 @@ const Home = () => {
                     vapes={VAPES_WAKA}
                 />
             </div>
+            
+          
+      
         </>
-    )
-}
+    );
+};
 
 export default Home;

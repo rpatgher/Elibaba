@@ -27,3 +27,40 @@
 .main-brand{
     font-size: 3rem;
 }
+.popup {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+  }
+  .button1{
+    color:green;
+  }
+  .imagevape{
+    width: 50px; 
+    height: auto; 
+  }
+
+  .popup .button2 {
+    position: absolute; 
+    
+    top: 5px; 
+    right: 5px; 
+    background-color: transparent;
+    color: #888;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .popup .button2:hover {
+    color: #555;
+  }
