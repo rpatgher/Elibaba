@@ -16,3 +16,11 @@
 .subtitle p{
     margin: 0;
 }
+
+.swiper-slide {
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.1); /* Increase size on hover */
+}
