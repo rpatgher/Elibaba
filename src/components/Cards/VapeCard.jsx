@@ -11,6 +11,7 @@ const VapeCard = ({ vape }) => {
 
     const handleMouseLeave = () => {
         setShowPopup(false);
+
     };
 
     return (
@@ -19,7 +20,8 @@ const VapeCard = ({ vape }) => {
                 <div className="image">
                     <img src={image} alt="Vape Image" />
                 </div>
-                <p className="descripcion">{name}</p>
+                <p className="descripcion">{name} </p>
+                <button className="add-button" onClick={handleAddClick}>+</button>
             </div>
             <div className="price">
                 <p style={{ backgroundColor: color }}>${price}</p>
@@ -42,3 +44,4 @@ const VapeCard = ({ vape }) => {
 };
 
 export default VapeCard;
+
