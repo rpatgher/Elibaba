@@ -21,7 +21,10 @@ const VapeCard = ({ vape }) => {
                     <img src={image} alt="Vape Image" />
                 </div>
                 <p className="descripcion">{name} </p>
-                <button className="add-button" onClick={handleAddClick}>+</button>
+                <button 
+                    className="add-button" 
+                    // onClick={handleAddClick}
+                >+</button>
             </div>
             <div className="price">
                 <p style={{ backgroundColor: color }}>${price}</p>
