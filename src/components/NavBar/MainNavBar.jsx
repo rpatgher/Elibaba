@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './MainNavBar.css';
+import { Link } from "react-router-dom"
 
 const MainNavBar = () => {
     const [cartOpen, setCartOpen] = useState(false);
@@ -13,7 +14,7 @@ const MainNavBar = () => {
                 </div>
                 <div className="actions">
                     <i className="fa-solid fa-cart-shopping cartlogo" onClick={() => setCartOpen(!cartOpen)}></i>
-                    <i className="fa-solid fa-user"></i>
+                    <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                 </div>
                 <div className={`cart-panel ${cartOpen ? 'open' : ''}`}>
                     <button className="close-btn" onClick={() => setCartOpen(false)}>X</button>
