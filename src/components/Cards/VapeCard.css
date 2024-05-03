@@ -66,11 +66,10 @@
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: #e4e4e4;
+    background-color: white;
     color: #000000;
     width: 10px;
     height: auto;
-    border: 1px solid #474545; /* Ejemplo: borde sólido azul */
 
     /* Removemos margin-left ya que ahora el botón está solo en su contenedor */
 }

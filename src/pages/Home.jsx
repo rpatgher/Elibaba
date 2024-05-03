@@ -220,21 +220,21 @@ const Home = () => {
                 <SearchBar />
                 <div className="subtitle">
                     <h2>Popular</h2>
-                    <p>Ver más</p>
+                    <button>Ver más</button>
                 </div>
                 <SwiperVapes 
                     vapes={VAPES_POPULAR}
                 />
                 <div className="subtitle">
                     <h2>IPLAY</h2>
-                    <p>Ver más</p>
+                    <button>Ver más</button>
                 </div>
                 <SwiperVapes 
                     vapes={VAPES_IPLAY}
                 />
                 <div className="subtitle">
                     <h2>Waka</h2>
-                    <p>Ver más</p>
+                    <button>Ver más</button>
                 </div>
                 <SwiperVapes 
                     vapes={VAPES_WAKA}

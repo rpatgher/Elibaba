@@ -23,7 +23,6 @@ const VapeCard = ({ vape }) => {
                 <p className="descripcion">{name} </p>
                 <button 
                     className="add-button" 
-                    // onClick={handleAddClick}
                 >+</button>
             </div>
             <div className="price">
