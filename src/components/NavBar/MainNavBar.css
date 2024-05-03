@@ -41,11 +41,14 @@
     height: 100vh; /* Altura completa de la vista */
     background-color: #fff; /* Fondo blanco o el color que prefieras */
     box-shadow: -2px 0 8px rgba(0,0,0,0.2); /* Sombra suave para darle profundidad */
-    padding: 20px; /* Espaciado interior */
     z-index: 101; /* Asegúrate de que sea mayor que el de .navbar para que se muestre por encima */
     transition: transform 0.3s ease-in-out; /* Transición suave al abrir/cerrar */
     transform: translateX(100%); /* Oculta el panel por defecto */
     transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+.cart-panel.completeorder{
+    padding: 0px; /* Espaciado interior */
 }
 
 .cart-panel.open {
@@ -80,9 +83,104 @@
     z-index: 50; /* Menor que el z-index del panel del carrito para que aparezca detrás */
 }
 
-.foto_producto img {
 
-    height: 100px;
-    width: auto;
+.carrito-items{
+    border: solid 1px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    border-radius: 5px;
+    position: relative;
+    margin: 20px; /* Espaciado interior */
+
 }
 
+.foto_producto img {
+    flex:1;
+    height: 100px;
+    width: auto;
+    margin: 10px
+}
+
+.producto{
+    flex:1;
+    
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    border: none; /* Removes the button's border */
+    background: none; /* Transparent background */
+    font-size: 1.5rem; /* Text size */
+    cursor: pointer; /* Changes the cursor to a pointer */
+}
+.cantidad{
+    margin-top: 10px;
+}
+.cantidad input{
+    width:40px;
+}
+.cantidad button{
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 200px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+.producto h4{
+    margin: 0px;
+    margin-top: 5px;
+}
+.descripcion p{
+    margin: 0px;
+    margin-top: 5px;
+}
+.completeorder{
+   
+    width: 100%;
+    bottom: 0px;
+    height: 50px;
+    margin: 0px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    font-weight: bolder;
+    border: none;
+}
+.completeorder:hover{
+    background-color: #393838;
+   
+}
+.cartlogo{
+    margin-right: 20px;
+}
+.finalcart{
+    border-top: solid 2px #393838;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    margin: 0px;
+    color: #000000;
+}
+.topfinalcart{
+    display: flex;
+    margin: 20px;
+}
+.finalcartotal{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.finalcarcosto{
+    position: fixed;
+    right:20px;
+    font-size: 2.5rem;
+}
+.finalcardesc{
+margin-left: 20px;
+margin-right: 20px;
+font-size: 15px;
+color: #393838;
+}
