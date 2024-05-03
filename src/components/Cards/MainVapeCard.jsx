@@ -27,11 +27,11 @@ const MainVapeCard = ({ vape }) => {
             </div>
             {showPopup && (
                 <div className="popup" onMouseLeave={handleMouseLeave}>
-                    <h3>Descripción:</h3>
+                    <h3>Vape: {name}</h3>
+                    <h4>Descripcion:</h4>
                     <p>Viene con un tamaño portátil y una 
                         sensación cómoda en la mano. 
                         Capacidad de 10 ml de e-líquido.</p>
-                    <p>Vape: {name}</p>
                     <p className='imagevape'><img src={image} alt="" /></p>
                     <p>Precio: ${price}</p>
                     <p>Hits: 4000</p>

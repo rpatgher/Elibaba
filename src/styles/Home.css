@@ -10,10 +10,19 @@
     padding: 0 2rem;
     width: 95%;
 }
-.subtitle h2{
-    margin: 0;
+.subtitle button {
+    color: black; 
+    border: none; 
+    cursor: pointer; 
+    background: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
 }
-.subtitle p{
+
+.subtitle button:hover {
+    color: gray; 
+
+}
+.subtitle h2{
     margin: 0;
 }
 
