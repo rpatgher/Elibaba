@@ -79,3 +79,10 @@
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
     z-index: 50; /* Menor que el z-index del panel del carrito para que aparezca detrás */
 }
+
+.foto_producto img {
+
+    height: 100px;
+    width: auto;
+}
+

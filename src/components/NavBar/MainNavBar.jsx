@@ -17,8 +17,26 @@ const MainNavBar = () => {
                 </div>
                 <div className={`cart-panel ${cartOpen ? 'open' : ''}`}>
                     <button className="close-btn" onClick={() => setCartOpen(false)}>X</button>
-                    {/* Aquí iría el contenido de tu carrito de compras */}
-                    <p>Carrito de compras...</p>
+                    
+                    <div>
+                        <div className='foto_producto'>
+                            <img src="./public/img/Aloe_Grape.png" alt="" />
+                        </div>
+                        <div className='producto'>
+
+                            <div className='descripcion'> 
+                                <p>Descripcion del producto</p>
+                            </div>
+                            
+                            <div className='cantidad'>
+                                <p>contador</p>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+             
+                    
                 </div>
             </div>
             {cartOpen && <div className="backdrop" onClick={() => setCartOpen(false)}></div>}
