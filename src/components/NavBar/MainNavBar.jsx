@@ -63,6 +63,7 @@ const MainNavBar = () => {
                             <h4>Vape name</h4>
                             <div className='descripcion'> 
                                 <p>Descripcion del producto</p>
+                                <p>$30</p>
                             </div>
                             
                             <div className='cantidad'>

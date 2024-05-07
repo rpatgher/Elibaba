@@ -134,9 +134,16 @@
     margin-top: 5px;
 }
 .descripcion p{
-    margin: 0px;
+    margin: 5px;
     margin-top: 5px;
 }
+
+.descripcion{
+display: flex;
+justify-content: space-between;
+margin: 10px;
+}
+
 .completeorder{
    
     width: 100%;
