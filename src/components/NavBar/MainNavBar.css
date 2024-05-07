@@ -85,7 +85,6 @@
 
 
 .carrito-items{
-    border: solid 1px rgb(0, 0, 0);
     display: flex;
     flex-direction: row;
     margin-top: 15px;
@@ -143,12 +142,13 @@
     width: 100%;
     bottom: 0px;
     height: 50px;
-    margin: 0px;
+    margin: 10px;
     cursor: pointer;
     background-color: #000000;
     color: #fff;
     font-weight: bolder;
     border: none;
+    border-radius: 30px;
 }
 .completeorder:hover{
     background-color: #393838;
@@ -158,11 +158,10 @@
     margin-right: 20px;
 }
 .finalcart{
-    border-top: solid 2px #393838;
+    border-top: solid 1px #393838;
     position: absolute;
-    width: 100%;
     bottom: 0px;
-    margin: 0px;
+    margin: 15px;
     color: #000000;
 }
 .topfinalcart{
@@ -170,7 +169,6 @@
     margin: 20px;
 }
 .finalcartotal{
-    font-weight: bold;
     font-size: 2.5rem;
 }
 .finalcarcosto{
@@ -184,4 +182,17 @@ margin-right: 20px;
 font-size: 15px;
 color: #393838;
 padding-bottom: 10px;
+}
+
+.titulo{
+    margin: 10px;
+
+}
+
+.titulo-categorias{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    color: #393838;
+    border-bottom: 1px solid black;
 }

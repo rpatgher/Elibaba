@@ -18,26 +18,40 @@ const MainNavBar = () => {
                 </div>
                 <div className={`cart-panel ${cartOpen ? 'open' : ''}`}>
                     <button className="close-btn" onClick={() => setCartOpen(false)}>X</button>
+
+                    <div className='titulo'>
+                    <h2>Tu carrito</h2>
+                    <div className='titulo-categorias'>
+                    <p>producto</p>
+                    <p>total</p>
+                    </div>
                     
+                    </div>
+                  
                     <div className='carrito-items'>
+                    
                         <div className='foto_producto'>
                             <img src="./public/img/Aloe_Grape.png" alt="" />
                         </div>
                         <div className='producto'>
-
+                            <h4>Vape name</h4>
                             <div className='descripcion'> 
                                 <p>Descripcion del producto</p>
                             </div>
                             
                             <div className='cantidad'>
-                                <p>contador</p>
+                               <button>-</button>
+                               <input></input>
+                               <button>+</button>
                             </div>
+                            
                             
 
                         </div>
+
+                        <button className="close"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKRJREFUSEvtlUEKgCAQRV93CYK6TsdpGXSZrlPQaYpAXVjDt8xd7mR03v8z6FQUXlXh/ChAD4xAYwjZgAGYLaEKsACtcLkC3VvA7i5aQlRclkglUPELwF/I7X1wHFsvDvDKpfXIonn+dfO+BsQK1T7wUx2ohNkl+gGXd/W0JH8P5NeUXSJFeAxIGTQx9HbwWC/5HJUTUCvpLm6OTjUyE/Pbx4oDDlBhOBmYaWrOAAAAAElFTkSuQmCC"/></button>
+                        
                     </div>
-
-
 
 
                     <div className='carrito-items'>
@@ -57,10 +71,16 @@ const MainNavBar = () => {
                                <button>+</button>
                             </div>
                             
+                            
 
                         </div>
-                        <button className="close">X</button>
+
+                        <button className="close"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKRJREFUSEvtlUEKgCAQRV93CYK6TsdpGXSZrlPQaYpAXVjDt8xd7mR03v8z6FQUXlXh/ChAD4xAYwjZgAGYLaEKsACtcLkC3VvA7i5aQlRclkglUPELwF/I7X1wHFsvDvDKpfXIonn+dfO+BsQK1T7wUx2ohNkl+gGXd/W0JH8P5NeUXSJFeAxIGTQx9HbwWC/5HJUTUCvpLm6OTjUyE/Pbx4oDDlBhOBmYaWrOAAAAAElFTkSuQmCC"/></button>
+                        
                     </div>
+
+
+                    
                    
              
                     <div className='finalcart'>
