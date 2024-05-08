@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1a5277, #2980b9, #c8e9ff);
+    position: relative;
+}
+
+.backgroundText {
+    position: absolute;
+    top: 3%; /* Posición desde la parte superior */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Alineación precisa del centro */
+    font-size: 90px; /* Tamaño grande del texto */
+    color: white; /* Color del texto */
+    opacity: 0.8; /* Transparencia para no distraer demasiado */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.title, .label {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.button {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.loginlink {
+    text-align: center;
+    margin-top: 20px;
+}
