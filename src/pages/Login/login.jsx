@@ -51,17 +51,13 @@ function Login() {
 
                 <div className={styles.socialButtons}>
                     {/* Suponiendo que tienes los íconos como componentes o imágenes */}
-                    <button className={styles.socialButton}>
-                        <img src="././img/LogoFacebook.png" alt="Logo Elibaba" className={styles.socialIcon} />
-                    </button>
-                    <button className={styles.socialButton}>
-                        <img src="././img/LogoX.png" alt="Logo Elibaba" className={styles.socialIcon} />
-                    </button>
-                    <button className={styles.socialButton}>
-                        <img src="././img/LogoInstagram.png" alt="Logo Elibaba" className={styles.socialIcon} />
-                    </button>
-                    
-                    <Link to="/signup"><i className="fa-solid fa-user"></i></Link>
+                   
+                   <div className={styles.signuplink}>
+                        <p>No tienes cuenta?</p>
+                        <Link to="/signup">Signup</Link>
+                   </div>
+                   
+                   
 
                     
                 </div>

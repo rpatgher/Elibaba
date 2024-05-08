@@ -111,6 +111,10 @@
 
 .socialButtons{
     padding-left: 50px;
-    
+}
 
+.signuplink {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 55px;
 }
