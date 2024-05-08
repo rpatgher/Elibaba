@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styles from "./Login.module.css";
+import styles from "./login.module.css";
+import { Link } from "react-router-dom";
 
 function Login() {
     // Estados para manejar las entradas del formulario
@@ -59,6 +60,10 @@ function Login() {
                     <button className={styles.socialButton}>
                         <img src="././img/LogoInstagram.png" alt="Logo Elibaba" className={styles.socialIcon} />
                     </button>
+                    
+                    <Link to="/signup"><i className="fa-solid fa-user"></i></Link>
+
+                    
                 </div>
             </form>
         </div>
