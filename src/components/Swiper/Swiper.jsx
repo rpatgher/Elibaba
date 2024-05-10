@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './Swiper.css';
+import { useState } from 'react'; 
+
 
 // ************ Components ************
 import MainVapeCard from "../Cards/MainVapeCard";
@@ -38,6 +40,8 @@ const VAPES = [
 ]
 
 const SwiperComponent = () => {
+
+    const [swiper, setSwiper] = useState(null); // Agrega estado para el Swiper
 
     const handleChangeSlide = () => {
         const swiper = document.querySelector('.main .swiper');

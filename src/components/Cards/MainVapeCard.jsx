@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './MainVapeCard.css';
 
-
-
 const MainVapeCard = ({ vape }) => {
     const { name, image, price, brand, color } = vape;
     const [showPopup, setShowPopup] = useState(false);
@@ -13,6 +11,12 @@ const MainVapeCard = ({ vape }) => {
 
     const handleMouseLeave = () => {
         setShowPopup(false);
+    };
+
+    const handleAddToCart = () => {
+        togglePopup();
+        // Aquí puedes mostrar la notificación
+        alert('Producto agregado a carrito');
     };
 
     return (
@@ -35,10 +39,11 @@ const MainVapeCard = ({ vape }) => {
                     <p className='imagevape'><img src={image} alt="" /></p>
                     <p>Precio: ${price}</p>
                     <p>Hits: 4000</p>
-                    <button onClick={togglePopup} className='button1'>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
+                    <button onClick={handleAddToCart} className='button1'>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
                 </div>
             )}
         </div>
     );
 };
+
 export default MainVapeCard;

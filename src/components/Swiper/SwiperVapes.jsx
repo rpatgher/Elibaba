@@ -27,4 +27,4 @@ const SwiperVapes = ({vapes}) => {
     )
 }
 
-export default SwiperVapes
+export default SwiperVapes 
