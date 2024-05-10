@@ -14,6 +14,12 @@ const VapeCard = ({ vape }) => {
 
     };
 
+    const handleAddToCart = () => {
+        togglePopup();
+        // Aquí puedes mostrar la notificación
+        alert('Producto agregado a carrito');
+    };
+
     return (
         <div className="card" style={{ backgroundColor: `color-mix(in srgb, ${color} 40%, #fff)` }}>
             <div className="vape" onClick={togglePopup}>
@@ -38,7 +44,7 @@ const VapeCard = ({ vape }) => {
                     <p className='imagevape'><img src={image} alt="" /></p>
                     <p>Precio: ${price}</p>
                     <p>Hits: 4000</p>
-                    <button onClick={togglePopup} className='button1'>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
+                    <button onClick={handleAddToCart} className='button1'>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
                 </div>
             )}
         </div>
