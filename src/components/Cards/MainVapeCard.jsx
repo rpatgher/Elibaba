@@ -14,7 +14,7 @@ const MainVapeCard = ({ vape }) => {
     };
 
     const handleAddToCart = () => {
-        togglePopup();
+        togglePopup(); 
         // Aquí puedes mostrar la notificación
         alert('Producto agregado a carrito');
     };
