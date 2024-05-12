@@ -10,14 +10,14 @@ const MainNavBar = () => {
             <div className="navbar">
                 <h1 className="logo-name">Elibaba</h1>
                 <div className="logo-image">
-                    <img src="./img/Elibabalogo.png" alt="Logo Elibaba" />
+                    <img src="../src\assets\img\Elibabalogo.png" alt="Logo Elibaba" />
                 </div>
                 <div className="actions">
                     <i className="fa-solid fa-cart-shopping cartlogo" onClick={() => setCartOpen(!cartOpen)}></i>
                     <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                 </div>
                 <div className={`cart-panel ${cartOpen ? 'open' : ''}`}>
-                    <button className="close-btn" onClick={() => setCartOpen(false)}>X</button>
+                    <button className="close-btn" onClick={() => setCartOpen(false)}><i className="fa-solid fa-x"></i></button>
 
                     <div className='titulo'>
                     <h2>Tu carrito</h2>
