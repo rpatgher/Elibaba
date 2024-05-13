@@ -12,7 +12,7 @@
     top: 3%; /* Posición desde la parte superior */
     left: 50%; /* Centrado horizontalmente */
     transform: translateX(-50%); /* Alineación precisa del centro */
-    font-size: 90px; /* Tamaño grande del texto */
+    font-size: 60px; /* Tamaño grande del texto */
     color: white; /* Color del texto */
     opacity: 0.8; /* Transparencia para no distraer demasiado */
 }
@@ -20,25 +20,29 @@
 .form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    padding: 20px;
+    width: 35%;
+    padding: 15px;
     background-color: #ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    margin-top: 100px;
+    margin-top: 30px;
+    height: 79%;
+
+
 }
 
 .title, .label {
     color: #333;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 .input {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 2px solid #ddd;
     border-radius: 5px;
 }
@@ -53,7 +57,17 @@
     transition: background-color 0.3s, transform 0.2s;
 }
 
+
+.button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Invertir gradiente al pasar el ratón */
+    transform: translateY(-2px); /* Desplazamiento al pasar el ratón */
+}
+
+.button:active {
+    transform: translateY(1px); /* Efecto al hacer clic */
+}
+
 .loginlink {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }

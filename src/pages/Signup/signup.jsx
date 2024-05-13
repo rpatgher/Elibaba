@@ -6,10 +6,11 @@ function Signup() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [telephone, setTelephone] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Username:', username, 'Email:', email, 'Password:', password);
+        console.log('Username:', username, 'Email:', email,'Telephone',telephone, 'Password:', password);
         // Aquí puedes añadir la lógica para procesar el registro
     };
 
@@ -19,13 +20,13 @@ function Signup() {
             <form className={styles.form} onSubmit={handleSubmit}>
                 <h1 className={styles.title}>Signup</h1>
 
-                <label htmlFor="username" className={styles.label}>Username</label>
+                <label htmlFor="username" className={styles.label}>Nombre de Usuario</label>
                 <input
                     type="text"
                     id="username"
                     name="username"
                     className={styles.input}
-                    placeholder="Type your username"
+                    placeholder="Escribe tu nombre du usuario"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
@@ -36,10 +37,21 @@ function Signup() {
                     id="email"
                     name="email"
                     className={styles.input}
-                    placeholder="Type your email"
+                    placeholder="Escribe tu e-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
+
+                <label htmlFor="Telephone" className={styles.label}>Telefono</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="'phone'"
+                    className={styles.input}
+                    placeholder="Escribe tu telefono"
+                    value={telephone}
+                    onChange={(e) => setTelephone(e.target.value.replace(/[^0-9]/g, ''))} 
+                    />          
 
                 <label htmlFor="password" className={styles.label}>Password</label>
                 <input
