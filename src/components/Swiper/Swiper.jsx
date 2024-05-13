@@ -1,12 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './Swiper.css';
-import { useState } from 'react'; 
+import { useState } from 'react';
 
-
-// ************ Components ************
 import MainVapeCard from "../Cards/MainVapeCard";
-
 
 const VAPES = [
     {
@@ -40,8 +37,7 @@ const VAPES = [
 ]
 
 const SwiperComponent = () => {
-
-    const [swiper, setSwiper] = useState(null); // Agrega estado para el Swiper
+    const [swiper, setSwiper] = useState(null);
 
     const handleChangeSlide = () => {
         const swiper = document.querySelector('.main .swiper');
@@ -54,6 +50,7 @@ const SwiperComponent = () => {
 
     return (
         <div className='main'>
+            <button className="swiper-button-prev">{'<'}</button> {/* Botón izquierdo */}
             <Swiper
                 spaceBetween={60}
                 slidesPerView={2.5}
@@ -72,6 +69,7 @@ const SwiperComponent = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <button className="swiper-button-next">{'>'}</button> {/* Botón derecho */}
         </div>
     )
 }

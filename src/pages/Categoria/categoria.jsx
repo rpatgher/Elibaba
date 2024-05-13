@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom"; // Asegúrate de que esta línea esté correctamente escrita
 
 // ************ Components ************
-import Header from "../components/Header/Header";
-import SwiperVapes from "../components/Swiper/SwiperVapes";
-import SearchBar from "../components/SeachBar/SeachBar"
+import Header from "../../components/Header/Header";
+import SwiperVapes from "../../components/Swiper/SwiperVapes";
+import SearchBar from "../../components/SeachBar/SeachBar"
 
 // ************ Styles ************
-import "../styles/Home.css";
+
 
 const VAPES_POPULAR = [
     {
@@ -214,30 +214,20 @@ const VAPES_WAKA = [
         }  
 ];
 
-const Home = () => {
+const Categorias = () => {
     return (
         <>
-            <Header />
+            
             <div className="body">
-                <SearchBar />
+               
                 <div className="subtitle">
-                    <h2>Popular</h2>
-                    <button><Link to="/categoria">ver mas</Link></button>
+                    <h2>Vapes</h2>
                 </div>
                 <SwiperVapes 
                     vapes={VAPES_POPULAR}
                 />
                 <div className="subtitle">
-                    <h2>IPLAY</h2>
-                    <button><Link to="/categoria">ver mas</Link></button>
-                   
-                </div>
-                <SwiperVapes 
-                    vapes={VAPES_IPLAY}
-                />
-                <div className="subtitle">
-                    <h2>Waka</h2>
-                    <button><Link to="/categoria">ver mas</Link></button>
+                    <h2>Vapes</h2>
                 </div>
                 <SwiperVapes 
                     vapes={VAPES_WAKA}
@@ -250,4 +240,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Categorias;
