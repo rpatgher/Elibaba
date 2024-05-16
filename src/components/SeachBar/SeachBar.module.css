@@ -1,14 +1,14 @@
-.search-bar-container{
+.searchbarcontainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10rem 0 3rem 0;
 }
-.search-bar{
+.searchbar{
     position: relative;
 }
-.search-bar input{
+.searchbar input{
     padding: 1rem 2rem;
     font-size: 2rem;
     width: 40rem;
@@ -18,7 +18,7 @@
     border: 1px solid var(--background);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.search-bar-container i{
+.searchbarcontainer i{
     position: absolute;
     top: 50%;
     right: 1.5rem;

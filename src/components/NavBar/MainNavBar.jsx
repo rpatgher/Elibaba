@@ -1,46 +1,46 @@
 import { useState } from 'react';
-import './MainNavBar.css';
 import { Link } from "react-router-dom"
+import styles from "./MainNavBar.module.css"
 
 const MainNavBar = () => {
     const [cartOpen, setCartOpen] = useState(false);
 
     return (
         <>
-            <div className="navbar">
-                <h1 className="logo-name">Elibaba</h1>
-                <div className="logo-image">
+            <div className={styles.navbar}>
+                <h1 className={styles.logoname}>Elibaba</h1>
+                <div className={styles.logoimage}>
                     <img src="../src\assets\img\Elibabalogo.png" alt="Logo Elibaba" />
                 </div>
-                <div className="actions">
-                    <i className="fa-solid fa-cart-shopping cartlogo" onClick={() => setCartOpen(!cartOpen)}></i>
+                <div className={styles.actions}>
+                    <i className={`fa-solid fa-cart-shopping ${styles.cartlogo}`}  onClick={() => setCartOpen(!cartOpen)}></i>
                     <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                 </div>
-                <div className={`cart-panel ${cartOpen ? 'open' : ''}`}>
-                    <button className="close-btn" onClick={() => setCartOpen(false)}><i className="fa-solid fa-x"></i></button>
+                <div className={`${styles.cartpanel} ${cartOpen ? 'open' : ''}`}>
+                    <button className={styles.closebtn} onClick={() => setCartOpen(false)}><i className="fa-solid fa-x"></i></button>
 
-                    <div className='titulo'>
+                    <div className={styles.titulo}>
                     <h2>Tu carrito</h2>
-                    <div className='titulo-categorias'>
+                    <div className={styles.titulocategorias}>
                     <p>producto</p>
                     <p>total</p>
                     </div>
                     
                     </div>
 
-                    <div className='carrito-items'>
+                    <div className={styles.carritoitems}>
                     
-                        <div className='foto_producto'>
-                            <img src="./public/img/Aloe_Grape.png" alt="" />
+                        <div className={styles.fotoproducto}>
+                            <img src="./public/img/Aloe_Grape.png" alt="Aloe Grape" />
                         </div>
-                        <div className='producto'>
+                        <div className={styles.producto}>
                             <h4>Vape name</h4>
-                            <div className='descripcion'> 
+                            <div className={styles.descripcion}> 
                                 <p>Descripcion del producto</p>
                                 <p>$30</p>
                             </div>
                             
-                            <div className='cantidad'>
+                            <div className={styles.cantidad}>
                                <button>-</button>
                                <input></input>
                                <button>+</button>
@@ -50,7 +50,7 @@ const MainNavBar = () => {
 
                         </div>
 
-                        <button className="close"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKRJREFUSEvtlUEKgCAQRV93CYK6TsdpGXSZrlPQaYpAXVjDt8xd7mR03v8z6FQUXlXh/ChAD4xAYwjZgAGYLaEKsACtcLkC3VvA7i5aQlRclkglUPELwF/I7X1wHFsvDvDKpfXIonn+dfO+BsQK1T7wUx2ohNkl+gGXd/W0JH8P5NeUXSJFeAxIGTQx9HbwWC/5HJUTUCvpLm6OTjUyE/Pbx4oDDlBhOBmYaWrOAAAAAElFTkSuQmCC"/></button>
+                        <button className={styles.colse}><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKRJREFUSEvtlUEKgCAQRV93CYK6TsdpGXSZrlPQaYpAXVjDt8xd7mR03v8z6FQUXlXh/ChAD4xAYwjZgAGYLaEKsACtcLkC3VvA7i5aQlRclkglUPELwF/I7X1wHFsvDvDKpfXIonn+dfO+BsQK1T7wUx2ohNkl+gGXd/W0JH8P5NeUXSJFeAxIGTQx9HbwWC/5HJUTUCvpLm6OTjUyE/Pbx4oDDlBhOBmYaWrOAAAAAElFTkSuQmCC"/></button>
                         
                     </div>
 
@@ -58,25 +58,25 @@ const MainNavBar = () => {
                     
                    
              
-                    <div className='finalcart'>
-                        <div className='topfinalcart'>
-                        <div className='finalcartotal'> 
+                    <div className={styles.finalcart}>
+                        <div className={styles.topfinalcart}>
+                        <div className={styles.finalcartotal}> 
                             Total estimado
                         </div>
-                        <div className='finalcarcosto'>
+                        <div className={styles.finalcarcosto}>
                             $ 900.00 MXN
                         </div>
                         </div>
-                        <div className='finalcardesc'>
+                        <div className={styles.finalcardesc}>
 Descripcion de todo como aviso de privacidad Descripcion de todo como aviso de privacidad Descripcion de todo como aviso de privacidad
                         </div>
                         <div>
-                        <button className='completeorder'>Completar compra <i class="fa-regular fa-credit-card"></i></button>
+                        <button className={styles.completeorder}>Completar compra <i class="fa-regular fa-credit-card"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
-            {cartOpen && <div className="backdrop" onClick={() => setCartOpen(false)}></div>}
+            {cartOpen && <div className={styles.backdrop} onClick={() => setCartOpen(false)}></div>}
         </>
     );
 }
