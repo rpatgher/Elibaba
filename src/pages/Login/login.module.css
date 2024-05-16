@@ -12,7 +12,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 35%;
     padding: 20px;
     height: 60%;
     background-color: #ffffff; /* Fondo blanco para el formulario */
