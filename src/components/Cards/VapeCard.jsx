@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './VapeCard.css';
+import styles from './VapeCard.module.css'
+import styles1 from "./MainVapeCard.module.css"
 
 const VapeCard = ({ vape }) => {
     const { name, price, image, color } = vape;
@@ -21,31 +22,31 @@ const VapeCard = ({ vape }) => {
     };
 
     return (
-        <div className="card" style={{ backgroundColor: `color-mix(in srgb, ${color} 40%, #fff)` }}>
-            <div className="vape" onClick={togglePopup}>
-                <div className="image">
+        <div className={styles.card} style={{ backgroundColor: `color-mix(in srgb, ${color} 40%, #fff)` }}>
+            <div className={styles.vape} onClick={togglePopup}>
+                <div className= {styles.vapeimage}>
                     <img src={image} alt="Vape Image" />
                 </div>
-                <p className="descripcion">{name} </p>
+                <p>{name} </p>
                 <button 
-                    className="add-button" 
+                    className={styles.addButton} 
                 >+</button>
             </div>
-            <div className="price">
+            <div className={styles.price}>
                 <p style={{ backgroundColor: color }}>${price}</p>
             </div>
             {showPopup && (
-                <div className="popup" onMouseLeave={handleMouseLeave}>
-                    <h3>Descripción:</h3>
-                    <p>Viene con un tamaño portátil y una 
-                        sensación cómoda en la mano. 
-                        Capacidad de 10 ml de e-líquido.</p>
-                    <p>Vape: {name}</p>
-                    <p className='imagevape'><img src={image} alt="" /></p>
-                    <p>Precio: ${price}</p>
-                    <p>Hits: 4000</p>
-                    <button onClick={handleAddToCart} className='button1'>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
-                </div>
+               <div className={styles1.popup} onMouseLeave={handleMouseLeave}>
+               <h3>Vape: {name}</h3>
+               <h4>Descripcion:</h4>
+               <p>Viene con un tamaño portátil y una 
+                   sensación cómoda en la mano. 
+                   Capacidad de 10 ml de e-líquido.</p>
+               <p className={styles1.imagevape}><img src={image} alt="" /></p>
+               <p>Precio: ${price}</p>
+               <p>Hits: 4000</p>
+               <button onClick={handleAddToCart} className={styles1.button1}>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
+           </div>
             )}
         </div>
     );

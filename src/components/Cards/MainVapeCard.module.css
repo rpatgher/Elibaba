@@ -1,4 +1,4 @@
-.main-card{
+.mainCard{
     background-color: var(--white);
     display: flex;
     justify-content: space-between;
@@ -7,24 +7,24 @@
     margin-bottom: -5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.main-text{
+.mainText{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
-.main-image{
+.mainImage{
     width: auto;
     height: 22rem;
     padding: 0;
 }
-.main-image img{
+.mainImage img{
     height: 100%;
 }
-.main-price{
+.mainPrice{
     font-size: 2.3rem;
 }
-.main-brand{
+.mainBrand{
     font-size: 3rem;
 }
 .popup {
