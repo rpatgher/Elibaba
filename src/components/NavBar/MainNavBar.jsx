@@ -16,7 +16,7 @@ const MainNavBar = () => {
                     <i className={`fa-solid fa-cart-shopping ${styles.cartlogo}`}  onClick={() => setCartOpen(!cartOpen)}></i>
                     <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                 </div>
-                <div className={`${styles.cartpanel} ${cartOpen ? 'open' : ''}`}>
+                <div className={`${styles.cartpanel} ${cartOpen ? styles.open : ''}`}>
                     <button className={styles.closebtn} onClick={() => setCartOpen(false)}><i className="fa-solid fa-x"></i></button>
 
                     <div className={styles.titulo}>
