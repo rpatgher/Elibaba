@@ -67,13 +67,8 @@ const SwiperComponent = () => {
                 }}
             >
                 {VAPES.map(vape => (
-                    <SwiperSlide
-                        key={vape.id}
-                    >
-                        <MainVapeCard 
-                            key={vape.id}
-                            vape={vape}
-                        />
+                    <SwiperSlide key={vape.id}>
+                        <MainVapeCard key={vape.id}vape={vape}/>
                     </SwiperSlide>
                 ))}
             </Swiper>
