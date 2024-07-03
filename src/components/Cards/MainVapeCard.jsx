@@ -1,21 +1,19 @@
+// MainVapeCard.jsx
 import React, { useState } from 'react';
-import styles from "./MainVapeCard.module.css"
+import styles from './MainVapeCard.module.css';
+import PopupPortal from './PopupPortal';
 
 const MainVapeCard = ({ vape }) => {
     const { name, image, price, brand, color } = vape;
     const [showPopup, setShowPopup] = useState(false);
 
-    const togglePopup = () => {
+    const togglePopup = (event) => {
+        event.stopPropagation();
         setShowPopup(!showPopup);
     };
 
-    const handleMouseLeave = () => {
-        setShowPopup(false);
-    };
-
-    const handleAddToCart = () => {
-        togglePopup(); 
-        // Aquí puedes mostrar la notificación
+    const handleAddToCart = (e) => {
+        e.stopPropagation();
         alert('Producto agregado a carrito');
     };
 
@@ -31,17 +29,22 @@ const MainVapeCard = ({ vape }) => {
                 <img src={image} alt={`${name} Vape Image`} />
             </div>
             {showPopup && (
-                <div className={styles.popup} onMouseLeave={handleMouseLeave}>
-                    <h3>Vape: {name}</h3>
-                    <h4>Descripcion:</h4>
-                    <p>Viene con un tamaño portátil y una 
-                        sensación cómoda en la mano. 
-                        Capacidad de 10 ml de e-líquido.</p>
-                    <p className={styles.imagevape}><img src={image} alt="" /></p>
-                    <p>Precio: ${price}</p>
-                    <p>Hits: 4000</p>
-                    <button onClick={handleAddToCart} className={styles.button1}>Agregar a carrito <i className="fa-solid fa-cart-shopping"></i></button>
-                </div>
+                <PopupPortal>
+                    <div className={styles.popup} onClick={(e) => e.stopPropagation()}>
+                        <h3>Vape: {name}</h3>
+                        <h4>Descripcion:</h4>
+                        <p>Viene con un tamaño portátil y una sensación cómoda en la mano. Capacidad de 10 ml de e-líquido.</p>
+                        <p className={styles.imagevape}>
+                            <img src={image} alt="" />
+                        </p>
+                        <p>Precio: ${price}</p>
+                        <p>Hits: 4000</p>
+                        <button onClick={handleAddToCart} className={styles.button1}>
+                            Agregar a carrito <i className="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <button className={styles.button2} onClick={togglePopup}>×</button>
+                    </div>
+                </PopupPortal>
             )}
         </div>
     );
