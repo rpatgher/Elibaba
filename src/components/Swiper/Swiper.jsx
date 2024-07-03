@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-
+import 'swiper/css/navigation'; // Importa los estilos de navegación que incluye botones de anterior y siguiente
 import './Swiper.css';
 import { useState } from 'react';
+import { Navigation } from 'swiper/modules';
+
 
 
 import MainVapeCard from "../Cards/MainVapeCard";
@@ -52,13 +54,17 @@ const SwiperComponent = () => {
 
     return (
         <div className='main'>
-            <button className="swiper-button-prev">{'<'}</button> {/* Botón izquierdo */}
             <Swiper
                 spaceBetween={60}
                 slidesPerView={2.5}
                 centeredSlides={true}
                 loop={true}
                 onSlideChange={handleChangeSlide}
+                modules={[Navigation]}
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }}
             >
                 {VAPES.map(vape => (
                     <SwiperSlide
@@ -71,7 +77,6 @@ const SwiperComponent = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <button className="swiper-button-next">{'>'}</button> {/* Botón derecho */}
         </div>
     )
 }
