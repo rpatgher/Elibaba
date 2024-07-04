@@ -20,11 +20,13 @@ body{
 
 
 .swiper-button-prev, .swiper-button-next {
+    color: black;
     position: absolute;
-    top: 50%; /* Centra los botones verticalmente */
+    top: 70%; /* Centra los botones verticalmente */
     z-index: 10;
     background-color: transparent;
     border: none;
+    font-weight: bolder;
     font-size: 24px; /* Ajusta el tamaño de los botones */
     cursor: pointer;
 }

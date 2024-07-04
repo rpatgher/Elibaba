@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom"; // Asegúrate de que esta línea esté correctamente escrita
 
 // ************ Components ************
-import Header from "../../components/Header/Header";
+import HeaderCat from "../../components/HeaderCat/HeaderCat";
 import SwiperVapes from "../../components/Swiper/SwiperVapes";
 import SearchBar from "../../components/SeachBar/SeachBar"
+
 
 // ************ Styles ************
 
@@ -219,7 +220,12 @@ const Categorias = () => {
         <>
             
             <div className="body">
-               
+
+            <HeaderCat />
+            <Link to="/">Regresar</Link>
+            <h1>hello</h1>
+            <SearchBar />
+
                 <div className="subtitle">
                     <h2>Vapes</h2>
                 </div>
