@@ -18,6 +18,7 @@ function Signup() {
         <div className={styles.container}>
             <div className={styles.backgroundText}>ELIBABA</div>
             <form className={styles.form} onSubmit={handleSubmit}>
+            <Link to="/">Regresar</Link>
                 <h1 className={styles.title}>Signup</h1>
 
                 <label htmlFor="username" className={styles.label}>Nombre de Usuario</label>

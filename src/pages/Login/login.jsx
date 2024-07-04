@@ -19,8 +19,9 @@ function Login() {
         <div className={styles.container}>
          <div className={styles.backgroundText}>ELIBABA</div>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <h1 className={styles.title}>Login</h1>
-                <label htmlFor="username" className={styles.label}>Username</label>
+                <Link to="/">Regresar</Link>
+                <h1 className={styles.title}>Iniciar sesion</h1>
+                <label htmlFor="username" className={styles.label}>Usuario</label>
                 <input
                     type="text"
                     id="username"
@@ -31,7 +32,7 @@ function Login() {
                     onChange={(e) => setUsername(e.target.value)}
                 />
 
-                <label htmlFor="password" className={styles.label}>Password</label>
+                <label htmlFor="password" className={styles.label}>Contraseña</label>
                 <input
                     type="password"
                     id="password"
@@ -43,7 +44,7 @@ function Login() {
                 />
 
                 <button type="submit" className={styles.button}>
-                    LOGIN
+                    Iniciar Sesion
                 </button>
 
                 <img className={styles.elibba}  />

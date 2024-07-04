@@ -14,10 +14,11 @@
     flex-direction: column;
     width: 35%;
     padding: 20px;
-    height: 60%;
+    height: 70%;
     background-color: #ffffff; /* Fondo blanco para el formulario */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
     border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden;
 }
 
 /* Título con estilo simple y moderno */
@@ -95,7 +96,7 @@
 }
 
 .backgroundText {
-    position: absolute;
+  
     top: 3%; /* Posición desde la parte superior */
     left: 50%; /* Centrado horizontalmente */
     transform: translateX(-50%); /* Alineación precisa del centro */
