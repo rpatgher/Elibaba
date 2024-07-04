@@ -4,8 +4,9 @@ import { Link } from "react-router-dom"; // Asegúrate de que esta línea esté 
 // ************ Components ************
 import HeaderCat from "../../components/HeaderCat/HeaderCat";
 import SwiperVapes from "../../components/Swiper/SwiperVapes";
-import SearchBar from "../../components/SeachBar/SeachBar"
+import SearchBarCat from "../../components/SearchBarCat/SearchBarCat"
 
+import styles from "./categoria.module.css"
 
 // ************ Styles ************
 
@@ -219,12 +220,15 @@ const Categorias = () => {
     return (
         <>
             
-            <div className="body">
+           
 
             <HeaderCat />
-            <Link to="/">Regresar</Link>
-            <h1>hello</h1>
-            <SearchBar />
+            <div className={styles.body}>
+            <Link to="/"><i className="fa-solid fa-arrow-left"></i> Regresar</Link>
+            <div className={styles.CatHeaddiv}>
+            <h1 className='CatHead'>Categoria elegida</h1>
+            </div>
+            <SearchBarCat />
 
                 <div className="subtitle">
                     <h2>Vapes</h2>
@@ -240,7 +244,9 @@ const Categorias = () => {
                 />
             </div>
             
-          
+          <div>
+            <h1>Footer</h1>
+          </div>
       
         </>
     );

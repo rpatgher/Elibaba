@@ -1,0 +1,14 @@
+.CatHead{
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+.CatHeaddiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.body{
+    margin-top: 100px;
+}

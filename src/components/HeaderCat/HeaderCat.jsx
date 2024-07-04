@@ -4,7 +4,6 @@ const HeaderCat = () => {
     return (
       <>
           <MainNavBar />
-          <h1>Hello</h1>
       </>
     )
   }
