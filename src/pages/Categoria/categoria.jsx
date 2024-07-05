@@ -217,7 +217,7 @@ const VAPES_WAKA = [
 const Categorias = () => {
     return (
         <>
-            
+            <h1>Pagina Categorias</h1>
             <div className="body">
                
                 <div className="subtitle">
@@ -233,6 +233,8 @@ const Categorias = () => {
                     vapes={VAPES_WAKA}
                 />
             </div>
+
+            
             
           
       

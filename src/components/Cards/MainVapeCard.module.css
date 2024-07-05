@@ -16,7 +16,7 @@
 .mainImage{
     width: auto;
     height: 22rem;
-    padding: 0;
+    padding: 20;
 }
 .mainImage img{
     height: 100%;
