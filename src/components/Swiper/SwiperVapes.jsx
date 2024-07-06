@@ -21,6 +21,7 @@ const SwiperVapes = ({vapes}) => {
                 pagination={true}
                 mousewheel={true}
                 cssMode={true}
+                className='swiper-vapes'
             >
                 {vapes.map(vape => (
                     <SwiperSlide 

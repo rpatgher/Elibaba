@@ -4,8 +4,8 @@
     border-radius: 2rem;
     user-select: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    min-height: 28rem;
-    width: 30rem;
+    min-height: 21rem;
+    width: 25rem;
 }
 
 .vape {
@@ -16,10 +16,8 @@
     margin-top: -3.5rem;
 }
 .vapeimage{
-    height: 22rem;
+    height: 18rem;
     width: 100%;
-    
-    
 }
 .vapeimage img {
     height: 115%;
@@ -30,7 +28,7 @@
 .vape p {
     margin: 0;
     /* margin-top: -1rem; */
-    font-size: 2.4rem;
+    font-size: 2rem;
     position: relative;
     z-index: 1;
     font-weight: bold;

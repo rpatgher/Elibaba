@@ -219,29 +219,31 @@ const Home = () => {
         <>
             <Header />
             <div className="body">
-                <SearchBar />
-                <div className="subtitle">
-                    <h2>Popular</h2>
-                    <button><Link to="/categoria">ver mas</Link></button>
+                <div className='container'>
+                    <SearchBar />
+                    <div className="subtitle">
+                        <h2>Popular</h2>
+                        <button><Link to="/categoria">ver mas</Link></button>
+                    </div>
+                    <SwiperVapes 
+                        vapes={VAPES_POPULAR}
+                    />
+                    <div className="subtitle">
+                        <h2>IPLAY</h2>
+                        <button><Link to="/categoria">ver mas</Link></button>
+                    
+                    </div>
+                    <SwiperVapes 
+                        vapes={VAPES_IPLAY}
+                    />
+                    <div className="subtitle">
+                        <h2>Waka</h2>
+                        <button><Link to="/categoria">ver mas</Link></button>
+                    </div>
+                    <SwiperVapes 
+                        vapes={VAPES_WAKA}
+                    />
                 </div>
-                <SwiperVapes 
-                    vapes={VAPES_POPULAR}
-                />
-                <div className="subtitle">
-                    <h2>IPLAY</h2>
-                    <button><Link to="/categoria">ver mas</Link></button>
-                   
-                </div>
-                <SwiperVapes 
-                    vapes={VAPES_IPLAY}
-                />
-                <div className="subtitle">
-                    <h2>Waka</h2>
-                    <button><Link to="/categoria">ver mas</Link></button>
-                </div>
-                <SwiperVapes 
-                    vapes={VAPES_WAKA}
-                />
             </div>
             
           

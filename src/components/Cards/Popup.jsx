@@ -14,27 +14,37 @@ const Popup = ({vape, togglePopup, handleAddToCart}) => {
                     className={styles.popup}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <h3>Vape: {name}</h3>
-                    <h4>Descripcion:</h4>
-                    <p>
-                        Viene con un tamaño portátil y una sensación cómoda en
-                        la mano. Capacidad de 10 ml de e-líquido.
-                    </p>
-                    <p className={styles.imagevape}>
-                        <img src={image} alt="" />
-                    </p>
-                    <p>Precio: ${price}</p>
-                    <p>Hits: 4000</p>
-                    <button
-                        onClick={handleAddToCart}
+                    <h3>{name}</h3>
+                    <div className={styles.content}>
+                        <div className={styles.imagevape}>
+                            <img src={image} alt="" />
+                        </div>
+                        <div className={styles.info}>
+                            <h4>Descripcion:</h4>
+                            <p>
+                                Viene con un tamaño portátil y una sensación cómoda en
+                                la mano. Capacidad de 10 ml de e-líquido.
+                            </p>
+                            <p>4000 hits</p>
+                            <p className={styles.price}>${price}</p>
+                        </div>
+                    </div>
+                    <div
                         className={styles.button1}
                     >
-                        Agregar a carrito{" "}
-                        <i className="fa-solid fa-cart-shopping"></i>
-                    </button>
-                    <button className={styles.button2} onClick={togglePopup}>
-                        ×
-                    </button>
+                        <button
+                            onClick={handleAddToCart}
+                            className={styles}
+                        >
+                            Agregar a carrito{" "}
+                            <i className="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div className={styles.button2}>
+                        <button onClick={togglePopup}>
+                            ×
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

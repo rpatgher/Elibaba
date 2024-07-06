@@ -2,6 +2,11 @@
     background-color: var(--background);
     padding: 4rem 0;
 }
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
 .subtitle{
     display: flex;
     justify-content: space-between;
@@ -25,7 +30,13 @@
 .subtitle h2{
     margin: 0;
 }
-
+.swiper-wrapper{
+    padding: 0 7rem;
+    width: calc(100% - 14rem);
+}
+.swiper > *{
+    scroll-snap-type: unset !important;
+}
 .swiper-slide {
     transition: transform 0.2s ease-in-out;
 }

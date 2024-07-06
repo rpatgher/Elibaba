@@ -1,4 +1,4 @@
-.mainCard{
+.mainCard {
     background-color: var(--white);
     display: flex;
     justify-content: space-between;
@@ -10,29 +10,34 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
 }
-.mainText{
+
+.mainText {
     width: 60%;
 }
-.mainImage{
+
+.mainImage {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.mainImage img{
+
+.mainImage img {
     width: 80%;
     height: auto;
 }
-.mainPrice{
+
+.mainPrice {
     font-size: 2.3rem;
 }
-.mainBrand{
+
+.mainBrand {
     font-size: 3rem;
 }
 
 
 
-.popupcontainer{
+.popupcontainer {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,11 +48,9 @@
     align-items: center;
     z-index: 1000;
 }
+
 .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
@@ -56,58 +59,72 @@
     width: 400px;
     height: auto;
     border-radius: 10px;
-  }
+}
 
 .popup h3 {
-    font-size: 1.5em; 
-    margin-bottom: 10px; 
+    font-size: 1.5em;
+    margin: 2rem 0 3rem 0;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
-.popup p {
-    margin-bottom: 5px; 
+.info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-
-.popup .imagevape img {
-    max-width: 100%; 
+.info h4{
+    margin: 0;
+}
+.info p{
+    font-size: 1.6rem;
+    margin: 0;
+}
+p.price{
+    font-size: 2.4rem;
+}
+.imagevape {
+    width: 45%;
     height: auto;
-    border-radius: 8px; 
 }
-
-.popup button {
-    padding: 10px 20px; 
-    font-size: 1em; 
-    background-color: #4CAF50; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer;
-    margin-left: 200px;
+.imagevape img {
+    max-width: 100%;
 }
-
-.popup button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-  .button1{
-    color:green;
-  }
-  .imagevape{
-    width: 50px; 
-    height: auto; 
-  }
-
-  .popup .button2 {
-    position: absolute; 
-    
-    top: 5px; 
-    right: 5px; 
-    background-color: transparent;
-    color: #888;
+.button1 button, .button2 button{
     border: none;
-    font-size: 20px;
+    border-radius: .5rem;
     cursor: pointer;
-  }
-  
-  .popup .button2:hover {
-    color: #555;
-  }
+}
+.button1{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.button1 button {
+    font-size: 1.4rem;
+    background-color: var(--green);
+    color: var(--white);
+    padding: .5rem 1rem;
+}
+.button1 button:hover {
+    background-color: color-mix(in srgb, var(--green) 70%, #000);
+}
+.button2 button{
+    font-size: 2rem;
+    background-color: transparent;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: .5rem 1rem;
+    color: var(--white);
+    background-color: var(--red);
+}
+
+.button2 button:hover {
+    background-color: color-mix(in srgb, var(--red) 70%, #000);
+}
