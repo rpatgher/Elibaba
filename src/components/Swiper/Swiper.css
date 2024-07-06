@@ -11,13 +11,18 @@ body{
 .main .swiper{
     padding: 0px;
     width: 100%;
-    min-height: 90vh;
+    min-height: 75vh;
     display: flex;
     align-items: flex-end;
-    overflow: visible;
     transition: background-color .3s ease-in-out;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+}
 
 .swiper-button-prev, .swiper-button-next {
     color: black;

@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation'; // Importa los estilos de navegación que incluye botones de anterior y siguiente
 import './Swiper.css';
 import { useState } from 'react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 
 
@@ -65,6 +65,9 @@ const SwiperComponent = () => {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 }}
+                pagination={true}
+                mousewheel={true}
+                cssMode={true}
             >
                 {VAPES.map(vape => (
                     <SwiperSlide key={vape.id}>

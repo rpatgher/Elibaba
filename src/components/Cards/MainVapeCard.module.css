@@ -4,28 +4,44 @@
     justify-content: space-between;
     border-radius: 2rem;
     padding: 2rem 4rem;
-    margin-bottom: -5rem;
+    /* margin-bottom: -30%; */
+    min-width: 80%;
+    min-height: 23rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
 }
 .mainText{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: 60%;
 }
 .mainImage{
-    width: auto;
-    height: 22rem;
-    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mainImage img{
-    height: 100%;
+    width: 80%;
+    height: auto;
 }
 .mainPrice{
     font-size: 2.3rem;
 }
 .mainBrand{
     font-size: 3rem;
+}
+
+
+
+.popupcontainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 .popup {
     position: fixed;

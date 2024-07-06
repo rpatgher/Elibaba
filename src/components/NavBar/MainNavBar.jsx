@@ -71,7 +71,7 @@ const MainNavBar = () => {
 Descripcion de todo como aviso de privacidad Descripcion de todo como aviso de privacidad Descripcion de todo como aviso de privacidad
                         </div>
                         <div>
-                        <button className={styles.completeorder}>Completar compra <i class="fa-regular fa-credit-card"></i></button>
+                        <button className={styles.completeorder}>Completar compra <i className="fa-regular fa-credit-card"></i></button>
                         </div>
                     </div>
                 </div>
