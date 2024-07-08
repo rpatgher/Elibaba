@@ -11,7 +11,6 @@ const Footer = () => {
             behavior: "smooth",
         });
     };
-
     return (
         <div className={styles.footer}>
             <div className={styles["footer-content"]}>

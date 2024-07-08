@@ -249,7 +249,6 @@ const Categorias = () => {
           <div>
 
          <Footer>   
-            
          </Footer>
 
           </div>

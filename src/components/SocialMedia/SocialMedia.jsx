@@ -1,5 +1,4 @@
 import styles from "./SocialMedia.module.css";
-
 const SocialMedia = ({footer}) => {
     return (
         <div className={`${styles.socialMedia} ${footer ? styles.footer : ''}`}>
