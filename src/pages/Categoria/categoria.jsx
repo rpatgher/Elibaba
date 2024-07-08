@@ -8,6 +8,8 @@ import SearchBarCat from "../../components/SearchBarCat/SearchBarCat"
 
 import styles from "./categoria.module.css"
 
+import Footer from "../../components/Footer/Footer"
+
 // ************ Styles ************
 
 
@@ -245,12 +247,11 @@ const Categorias = () => {
             </div>
             
           <div>
-          <div className={styles.logoimage}>
-                    <img src="../src\assets\img\Elibabalogo.png" alt="Logo Elibaba" />
-                </div>
-            <h1>Footer</h1>
-            <p>info de contacto</p>
-            <p>blah blah blah joseph is a rat</p>
+
+         <Footer>   
+            
+         </Footer>
+
           </div>
       
         </>
