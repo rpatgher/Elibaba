@@ -46,7 +46,6 @@ const MainNavBar = () => {
                                <button>+</button>
                             </div>
                             
-                            
 
                         </div>
 
