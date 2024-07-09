@@ -37,7 +37,7 @@ const MainNavBar = () => {
                             <h4>Vape name</h4>
                             <div className={styles.descripcion}> 
                                 <p>Descripcion del producto</p>
-                                <p>$30</p>
+                                <p>$300</p>
                             </div>
                             
                             <div className={styles.cantidad}>
@@ -67,8 +67,7 @@ const MainNavBar = () => {
                         </div>
                         </div>
                         <div className={styles.finalcardesc}>
-Descripcion de todo como aviso de privacidad Descripcion de todo como aviso de privacidad Descripcion de todo como aviso de privacidad
-                        </div>
+                        Al completar tu compra, estás de acuerdo con nuestros Términos y Condiciones y Política de Privacidad. Todos los productos son revisados antes del envío para garantizar la máxima calidad. Tu información personal es segura con nosotros y se utilizará únicamente para procesar tu pedido y mejorar tu experiencia de compra.                        </div>
                         <div>
                         <button className={styles.completeorder}>Completar compra <i className="fa-regular fa-credit-card"></i></button>
                         </div>

@@ -4,7 +4,7 @@ import styles from "./MainVapeCard.module.css";
 import PopupPortal from "./PopupPortal";
 import Popup from "./Popup";
 
-const MainVapeCard = ({ vape }) => {
+const MainVapeCard = ({ vape, setCartOpen }) => {
     const { name, image, price, brand, color } = vape;
     const [showPopup, setShowPopup] = useState(false);
 
@@ -16,6 +16,8 @@ const MainVapeCard = ({ vape }) => {
     const handleAddToCart = (e) => {
         e.stopPropagation();
         alert("Producto agregado a carrito");
+        setCartOpen(true); // # esto se agrega
+
     };
 
     return (
