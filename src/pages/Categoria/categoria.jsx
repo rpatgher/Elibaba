@@ -41,6 +41,62 @@ const VAPES_POPULAR = [
         image: "./img/Grape_Pear.png",
         price: "250",
         color: "#eac704"
+    },
+    {
+        id: 1,
+        name: "Mint",
+        image: "./img/Mint.png",
+        price: "250",
+        color: "#30BEE1"
+    },
+    {
+        id: 2,
+        name: "Aloe Grape",
+        image: "./img/Aloe_Grape.png",
+        price: "250",
+        color: "#AB48F8"
+    },
+    {
+        id: 3,
+        name: "Blueberry Raspberry",
+        image: "./img/Blueberry_Raspberry.png",
+        price: "250",
+        color: "#225AE4"
+    },
+    {
+        id: 4,
+        name: "Grape Pear",
+        image: "./img/Grape_Pear.png",
+        price: "250",
+        color: "#eac704"
+    },
+    {
+        id: 1,
+        name: "Mint",
+        image: "./img/Mint.png",
+        price: "250",
+        color: "#30BEE1"
+    },
+    {
+        id: 2,
+        name: "Aloe Grape",
+        image: "./img/Aloe_Grape.png",
+        price: "250",
+        color: "#AB48F8"
+    },
+    {
+        id: 3,
+        name: "Blueberry Raspberry",
+        image: "./img/Blueberry_Raspberry.png",
+        price: "250",
+        color: "#225AE4"
+    },
+    {
+        id: 4,
+        name: "Grape Pear",
+        image: "./img/Grape_Pear.png",
+        price: "250",
+        color: "#eac704"
     }
 ];
 
@@ -221,14 +277,13 @@ const VAPES_WAKA = [
 const Categorias = () => {
     return (
         <>
-            
-           
-
             <HeaderCat />
             <div className={styles.body}>
+               
             <Link to="/"><i className="fa-solid fa-arrow-left"></i> Regresar</Link>
+                
             <div className={styles.CatHeaddiv}>
-            <h1 className='CatHead'>Categoria elegida</h1>
+            <h1 className='CatHead'>Categoria Elegida</h1>
             </div>
             <SearchBarCat />
 
