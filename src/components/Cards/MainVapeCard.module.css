@@ -132,12 +132,12 @@ p.tag{
     background-color: color-mix(in srgb, var(--green) 70%, #000);
 }
 .closeBtn button{
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: transparent;
     position: absolute;
     top: 5px;
     right: 5px;
-    padding: .5rem 1rem;
+    padding: .5rem .7rem;
     color: var(--white);
     background-color: var(--red);
 }

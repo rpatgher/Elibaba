@@ -1,7 +1,27 @@
+.body{
+    max-width: 110rem;
+    margin: 15rem auto;
+    position: relative;
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 0 5rem;
+}
+.back a{
+    color: var(--black);
+}
+
 .CatHead{
     flex: 1;
     justify-content: center;
     text-align: center;
+}
+.subtitle{
+    margin: 5rem 0;
+    padding: 0 5rem;
 }
 .CatHeaddiv{
     display: flex;
@@ -9,14 +29,15 @@
     justify-content: center;
     text-align: center;
 }
-.body{
-    margin-top: 100px;
-    margin-left: 10px;
-    
-}
 .logoimage{
     width: 60px;
     height: auto;
+}
+.vapes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7rem;
+    padding: 0 3rem;
 }
 
 

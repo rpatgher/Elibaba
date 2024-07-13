@@ -1,0 +1,109 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: flex-end;
+}
+.cartpanel {
+    min-width: 47rem;
+    background-color: var(--background);
+    padding: 2rem;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out;
+    transform: translateX(100%);
+}
+.cartpanel.open {
+    transform: translateX(0);
+    transition: transform 0.1s ease-in-out;
+}
+.closebtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem .7rem;
+    color: var(--white);
+    background-color: var(--red);
+}
+.closebtn:hover {
+    background-color: color-mix(in srgb, var(--red) 70%, #000);
+}
+.titulo {
+    margin: 0;
+}
+.titulo h2{
+    margin: 1rem 0;
+}
+.titulocategorias {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    color: gray;
+    color: color-mix(in srgb, var(--white) 50%, #000);
+}
+.carritoitems {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    position: relative;
+}
+.finalcart {
+    border-top: solid 1px #393838;
+    position: absolute;
+    bottom: 0px;
+    margin: 15px;
+    color: #000000;
+}
+.topfinalcart {
+    display: flex;
+    margin: 2rem 0;
+}
+.finalcartotal {
+    font-size: 2.5rem;
+}
+.finalcarcosto {
+    position: fixed;
+    right: 20px;
+    font-size: 2.5rem;
+}
+.finalcardesc {
+    font-size: 15px;
+    color: #393838;
+    padding-bottom: 10px;
+}
+.completeorder {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: black;
+    color: var(--white);
+    border: none;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.completeorder:hover {
+    background-color: #393838;
+
+}
+
+
+
+
+
+
+
+

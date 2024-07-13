@@ -66,7 +66,7 @@ const Popup = ({vape, togglePopup, handleAddToCart}) => {
                     </div>
                     <div className={styles.closeBtn}>
                         <button onClick={togglePopup}>
-                            ×
+                            <i className="fa-solid fa-x"></i>
                         </button>
                     </div>
                 </div>

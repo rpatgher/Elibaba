@@ -224,14 +224,14 @@ const Home = () => {
                     <SearchBar />
                     <div className="subtitle">
                         <h2>Popular</h2>
-                        <button><Link to="/categoria">Ver más</Link></button>
+                        <button><Link to="/categoria/popular">Ver más</Link></button>
                     </div>
                     <SwiperVapes 
                         vapes={VAPES_POPULAR}
                     />
                     <div className="subtitle">
                         <h2>IPLAY</h2>
-                        <button><Link to="/categoria">Ver más</Link></button>
+                        <button><Link to="/categoria/iplay">Ver más</Link></button>
                     
                     </div>
                     <SwiperVapes 
@@ -239,7 +239,7 @@ const Home = () => {
                     />
                     <div className="subtitle">
                         <h2>Waka</h2>
-                        <button><Link to="/categoria">Ver más</Link></button>
+                        <button><Link to="/categoria/waka">Ver más</Link></button>
                     </div>
                     <SwiperVapes 
                         vapes={VAPES_WAKA}
