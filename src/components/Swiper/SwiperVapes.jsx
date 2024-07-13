@@ -8,11 +8,10 @@ import VapeCard from '../Cards/VapeCard';
 
 const SwiperVapes = ({vapes}) => {
     return (
-        <div>
-            <button className="swiper-button-prev"></button>
+        <div className="swiper-container">
             <Swiper
-                spaceBetween={35}
-                slidesPerView={5.5}
+                spaceBetween={50}
+                slidesPerView={5}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 navigation={{
                     nextEl: '.swiper-button-next',
@@ -23,6 +22,7 @@ const SwiperVapes = ({vapes}) => {
                 cssMode={true}
                 className='swiper-vapes'
             >
+                <button className="swiper-button-prev"></button>
                 {vapes.map(vape => (
                     <SwiperSlide 
                         key={vape.id}
@@ -31,8 +31,8 @@ const SwiperVapes = ({vapes}) => {
                         <VapeCard key={vape.id} vape={vape}/>
                     </SwiperSlide>
                 ))}
+                <button className="swiper-button-next"></button>
             </Swiper>
-            <button className="swiper-button-next"></button> 
         </div>
     )
 }

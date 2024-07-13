@@ -1,26 +1,26 @@
 .card {
     display: flex;
     justify-content: space-between;
-    border-radius: 2rem;
+    border-radius: 1rem;
     user-select: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    min-height: 21rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    min-height: 24rem;
     width: 25rem;
 }
 
 .vape {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 0 2rem;
-    margin-top: -3.5rem;
+    justify-content: center;
+    padding: 0 0 0 2rem;
+    margin-top: -6.5rem;
 }
 .vapeimage{
-    height: 18rem;
+    height: 21rem;
     width: 100%;
 }
 .vapeimage img {
-    height: 115%;
+    height: 120%;
     width: auto;
     object-fit: cover;
 }
@@ -59,7 +59,7 @@
     margin: 0;
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border-radius: 0% 15% 15% 0%;
     padding: 0.5rem;
 }

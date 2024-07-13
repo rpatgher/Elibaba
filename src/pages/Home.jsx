@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"; // Asegúrate de que esta línea esté 
 import Header from "../components/Header/Header";
 import SwiperVapes from "../components/Swiper/SwiperVapes";
 import SearchBar from "../components/SeachBar/SeachBar"
+import Footer from '../components/Footer/Footer';
 
 // ************ Styles ************
 import "../styles/Home.css";
@@ -112,28 +113,28 @@ const VAPES_WAKA = [
         name: "Dark Cherry",
         image: "./img/Waka_Dark_Cherry.png",
         price: "250",
-        color: "#225AE4"
+        color: "#990000"
         },
         {
         id: 2,
         name: "Fresh Mint",
         image: "./img/Fresh_Mint.png",
         price: "250",
-        color: "#225AE4"
+        color: "#303030"
         },
         {
         id: 3,
         name: "Watermelon",
         image: "./img/Watermelon_Chill.png",
         price: "250",
-        color: "#225AE4"
+        color: "#990000"
         },
         {
         id: 4,
         name: "Cool Mint",
         image: "./img/Cool_Mint.png",
         price: "250",
-        color: "#225AE4"
+        color: "#303030"
         },
         {
         id: 5,
@@ -223,14 +224,14 @@ const Home = () => {
                     <SearchBar />
                     <div className="subtitle">
                         <h2>Popular</h2>
-                        <button><Link to="/categoria">ver mas</Link></button>
+                        <button><Link to="/categoria">Ver más</Link></button>
                     </div>
                     <SwiperVapes 
                         vapes={VAPES_POPULAR}
                     />
                     <div className="subtitle">
                         <h2>IPLAY</h2>
-                        <button><Link to="/categoria">ver mas</Link></button>
+                        <button><Link to="/categoria">Ver más</Link></button>
                     
                     </div>
                     <SwiperVapes 
@@ -238,16 +239,14 @@ const Home = () => {
                     />
                     <div className="subtitle">
                         <h2>Waka</h2>
-                        <button><Link to="/categoria">ver mas</Link></button>
+                        <button><Link to="/categoria">Ver más</Link></button>
                     </div>
                     <SwiperVapes 
                         vapes={VAPES_WAKA}
                     />
                 </div>
             </div>
-            
-          
-      
+            <Footer />
         </>
     );
 };

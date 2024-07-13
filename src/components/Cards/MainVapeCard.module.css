@@ -1,5 +1,5 @@
 .mainCard {
-    background-color: var(--white);
+    background-color: var(--background);
     display: flex;
     justify-content: space-between;
     border-radius: 2rem;
@@ -51,19 +51,19 @@
 
 .popup {
     position: relative;
-    background-color: white;
-    padding: 20px;
+    background-color:var(--background);
+    padding: 4rem;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 10000;
-    width: 400px;
-    height: auto;
+    max-width: 60rem;
     border-radius: 10px;
 }
 
 .popup h3 {
-    font-size: 1.5em;
-    margin: 2rem 0 3rem 0;
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 .content{
     display: flex;
@@ -80,41 +80,58 @@
 }
 .info h4{
     margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: normal;
 }
 .info p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 0;
 }
 p.price{
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+    margin: 2rem 0;
+    /* font-weight: bold; */
 }
 .imagevape {
-    width: 45%;
+    width: 60%;
     height: auto;
 }
 .imagevape img {
     max-width: 100%;
 }
-.button1 button, .button2 button{
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;   
+}
+p.tag{
+    padding: .5rem;
+    color: var(--white);
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+.addToCart button, .closeBtn button{
     border: none;
     border-radius: .5rem;
     cursor: pointer;
 }
-.button1{
+.addToCart{
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
 }
-.button1 button {
-    font-size: 1.4rem;
-    background-color: var(--green);
+.addToCart button {
+    font-size: 1.3rem;
     color: var(--white);
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-transform: uppercase;
 }
-.button1 button:hover {
+.addToCart button:hover {
     background-color: color-mix(in srgb, var(--green) 70%, #000);
 }
-.button2 button{
+.closeBtn button{
     font-size: 2rem;
     background-color: transparent;
     position: absolute;
@@ -125,6 +142,6 @@ p.price{
     background-color: var(--red);
 }
 
-.button2 button:hover {
+.closeBtn button:hover {
     background-color: color-mix(in srgb, var(--red) 70%, #000);
 }

@@ -9,12 +9,18 @@
     --white: #FCFFFC;
     --gray: #E5E5E5;
     --background: #F2F2F4;
+    /* --background: #1F3645; */
     --dark_gray: #7C7C7C;
+
+    --blue: #0c588a;
+    --sky-blue: #1a85e9;
 
   
   --red: #990000;
   --green: #00a100;
   --yellow: #eac704;
+
+  --bg-swiper: #303030;
   
   
   /* Fonts Sizes */

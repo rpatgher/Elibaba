@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import SocialMedia from "../SocialMedia/SocialMedia";
+import logo from "../../assets/img/Elibabalogo.png";
 
 
 const Footer = () => {
@@ -16,8 +17,7 @@ const Footer = () => {
             <div className={styles["footer-content"]}>
                 <div className={styles.footerImage}>
                         <picture>
-                            
-                            <img src="../../assets/img/Elibabalogo.png" alt="Logo Elibaba" loading="lazy" width="200" height="300" />
+                            <img src={logo} alt="Logo Elibaba" loading="lazy" width="200" height="300" />
                         </picture> 
                         
                 </div>

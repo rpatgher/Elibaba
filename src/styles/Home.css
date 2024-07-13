@@ -16,16 +16,16 @@
     width: 95%;
 }
 .subtitle button {
-    color: black; 
     border: none; 
     cursor: pointer; 
     background: none; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+    text-transform: uppercase;
 }
-
+.subtitle a{
+    color: var(--black);
+}
 .subtitle button:hover {
-    color: gray; 
-
+    color: gray;
 }
 .subtitle h2{
     margin: 0;

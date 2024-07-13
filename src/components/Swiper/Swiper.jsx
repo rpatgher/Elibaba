@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation'; // Importa los estilos de navegación que incluye botones de anterior y siguiente
 import './Swiper.css';
-import { useState } from 'react';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 
@@ -41,14 +40,12 @@ const VAPES = [
 ]
 
 const SwiperComponent = () => {
-    const [swiper, setSwiper] = useState(null);
-
     const handleChangeSlide = () => {
-        const swiper = document.querySelector('.main .swiper');
         setTimeout(() => {
             const currentCard = document.querySelector('.swiper-slide-active');
-            let color = currentCard.children[0].dataset.color;
-            swiper.style.backgroundColor = `color-mix(in srgb, ${color} 60%, #fff)`;
+            let color = currentCard.children[0].dataset.color + '8A';
+            var root = document.documentElement;
+            root.style.setProperty('--bg-swiper', `color-mix(in srgb, ${color} 60%, #000)`);
         }, 300);
     }
 
@@ -58,22 +55,24 @@ const SwiperComponent = () => {
                 spaceBetween={60}
                 slidesPerView={2.5}
                 centeredSlides={true}
-                loop={true}
                 onSlideChange={handleChangeSlide}
                 modules={[Navigation]}
                 navigation={{
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 }}
-                pagination={true}
                 mousewheel={true}
                 cssMode={true}
+                pagination={true}
+                loop={true}
             >
+                <button className="swiper-button-prev"></button>
                 {VAPES.map(vape => (
                     <SwiperSlide key={vape.id}>
                         <MainVapeCard key={vape.id}vape={vape}/>
                     </SwiperSlide>
                 ))}
+                <button className="swiper-button-next"></button> 
             </Swiper>
         </div>
     )

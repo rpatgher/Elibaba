@@ -7,14 +7,32 @@
 body{
     overflow-x: hidden;
 }
-
+.main{
+    background-color: var(--background);
+}
 .main .swiper{
+    mask-image: linear-gradient(to bottom, var(--background) 80%, transparent);
+    background: url("src/assets/img/bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 0px;
     width: 100%;
-    min-height: 75vh;
+    min-height: 80vh;
     display: flex;
     align-items: flex-end;
     transition: background-color .3s ease-in-out;
+
+    position: relative;
+}
+.main .swiper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bg-swiper);
 }
 .swiper-vapes {
     position: relative;
@@ -28,15 +46,21 @@ body{
 }
 
 .swiper-button-prev, .swiper-button-next {
-    color: black;
+    color: color-mix(in srgb, var(--bg-swiper) 50%, #000);
     position: absolute;
-    top: 70%; /* Centra los botones verticalmente */
-    z-index: 10;
+    top: 50%;
+    z-index: 100;
     background-color: transparent;
     border: none;
     font-weight: bolder;
-    font-size: 24px; /* Ajusta el tamaño de los botones */
+    font-size: 24px;
     cursor: pointer;
+}
+.swiper-container .swiper-button-prev{
+    left: 3.5rem;
+}
+.swiper-container .swiper-button-next{
+    right: 3.5rem;
 }
 
 
