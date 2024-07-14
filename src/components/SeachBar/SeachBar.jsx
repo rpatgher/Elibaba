@@ -1,6 +1,10 @@
-import styles from "./SeachBar.module.css"
+import styles from "./SeachBar.module.css";
+
+// ************ Hooks ************
+import useApp from "../../hooks/useApp";
 
 const SeachBar = () => {
+    const { categories, changeCategory } = useApp();
     return (
         <div className={styles.searchbarcontainer}>
             <div className={styles.searchbar}>
@@ -11,18 +15,15 @@ const SeachBar = () => {
                 <i className="fa-solid fa-magnifying-glass"></i>
             </div>
             <div className={styles.categories}>
-                <div className={styles.category}>
-                    Marca
-                </div>
-                <div className={styles.category}>
-                    Sabor
-                </div>
-                <div className={styles.category}>
-                    Hits
-                </div>
-                <div className={styles.category}>
-                    Recargable
-                </div>
+                {categories.map((category, index) => (
+                    <div 
+                        className={styles.category} 
+                        key={index}
+                        onClick={() => changeCategory(category.name)}
+                    >
+                        {category.name}
+                    </div>
+                ))}
             </div>
         </div>
     )

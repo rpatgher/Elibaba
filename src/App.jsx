@@ -6,19 +6,24 @@ import Login from "./pages/Login/login"
 import Signup from "./pages/Signup/signup"
 import Categoria from "./pages/Categoria/Categoria";
 
+// ***************** Providers *****************
+import { AppProvider } from './providers/AppProvider';
+
 
 function App() {
 
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/login" element={<Login />}/>
-          <Route path="/signup" element={<Signup />}/> 
-          <Route path="/categoria/:category" element={<Categoria />}/> 
+      <AppProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/signup" element={<Signup />}/> 
+            <Route path="/categoria/:category" element={<Categoria />}/> 
 
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </AppProvider>
     )
 }
 

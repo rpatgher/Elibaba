@@ -31,7 +31,7 @@ const VapeCard = ({ vape }) => {
                 <div>
                     <div className={styles.vapeimage}>
                         <img
-                            src={image}
+                            src={`${import.meta.env.VITE_BACKEND_URL}/uploads/elements/${image}`}
                             alt="Vape Image"
                             style={{
                                 maskImage: `linear-gradient(to bottom, ${color} 60%, transparent)`,
