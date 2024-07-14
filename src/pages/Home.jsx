@@ -18,52 +18,32 @@ import { VAPES_POPULAR, VAPES_IPLAY, VAPES_WAKA } from "../data/vapes.js";
 
 const Home = () => {
     const { products } = useApp();
-
-
-
+    
     return (
         <>
             <Header />
             <div className="body">
                 <div className='container'>
                     <SearchBar />
-                    {products.map((element, index) => (
-                        <Fragment
-                            key={index}
-                        >
-                            <div 
-                                className="subtitle"
+                    {products.length > 0 ? (
+                        products.map((element, index) => (
+                            <Fragment
+                                key={index}
                             >
-                                <h2>{element.category}</h2>
-                                <button><Link to={`/categoria/${element.category}`}>Ver más</Link></button>
-                            </div>
-                            <SwiperVapes 
-                                vapes={element.products}
-                            />
-                        </Fragment>
-                    ))}
-                    {/* <div className="subtitle">
-                        <h2>Popular</h2>
-                        <button><Link to="/categoria/popular">Ver más</Link></button>
-                    </div>
-                    <SwiperVapes 
-                        vapes={VAPES_POPULAR}
-                    />
-                    <div className="subtitle">
-                        <h2>IPLAY</h2>
-                        <button><Link to="/categoria/iplay">Ver más</Link></button>
-                    
-                    </div>
-                    <SwiperVapes 
-                        vapes={VAPES_IPLAY}
-                    />
-                    <div className="subtitle">
-                        <h2>Waka</h2>
-                        <button><Link to="/categoria/waka">Ver más</Link></button>
-                    </div>
-                    <SwiperVapes 
-                        vapes={VAPES_WAKA}
-                    /> */}
+                                <div 
+                                    className="subtitle"
+                                >
+                                    <h2>{element.category}</h2>
+                                    <button><Link to={`/categoria/${element.category}`}>Ver más</Link></button>
+                                </div>
+                                <SwiperVapes 
+                                    vapes={element.products}
+                                />
+                            </Fragment>
+                        ))
+                    ): (
+                        <h2 className='no-products'>No hay productos disponibles para esta categoría</h2>
+                    )}
                 </div>
             </div>
             <Footer />

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // ************ Components ************
@@ -10,120 +10,29 @@ import Footer from "../../components/Footer/Footer";
 // ************ Styles ************
 import styles from "./Categoria.module.css";
 
+// ************ Hooks ************
+import useApp from "../../hooks/useApp";
 
+// ************ Helpers ************
+import orderElements from "../../helpers/orderElements.js";
 
-
-const VAPES_WAKA = [
-    {
-        id: 1,
-        name: "Dark Cherry",
-        image: "/img/Waka_Dark_Cherry.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 2,
-        name: "Fresh Mint",
-        image: "/img/Fresh_Mint.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 3,
-        name: "Watermelon",
-        image: "/img/Watermelon_Chill.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 4,
-        name: "Cool Mint",
-        image: "/img/Cool_Mint.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 5,
-        name: "Strawberry",
-        image: "/img/Strawberry.png",
-        price: "250",
-        color: "#E37AF1",
-    },
-    {
-        id: 6,
-        name: "Blueberry",
-        image: "/img/Blueberry.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 7,
-        name: "Grape Apple",
-        image: "/img/Grape_Apple.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 8,
-        name: "Mango",
-        image: "/img/Mango.png",
-        price: "250",
-        color: "#F0BF3C",
-    },
-    {
-        id: 9,
-        name: "Icy Water",
-        image: "/img/Icy_Water.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 10,
-        name: "Strawberry Dragon Fruit",
-        image: "/img/StrawberryDF.png",
-        price: "250",
-        color: "#E37AF1",
-    },
-    {
-        id: 11,
-        name: "Kiwi Dragon Fruit",
-        image: "/img/KiwiDFB.png",
-        price: "250",
-        color: "#E37AF1",
-    },
-    {
-        id: 12,
-        name: "Mr.Blue",
-        image: "/img/Mr.Blue.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 13,
-        name: "Peach Blue Raspberry",
-        image: "/img/PBR.png",
-        price: "250",
-        color: "#225AE4",
-    },
-    {
-        id: 14,
-        name: "Chewy Watermelon",
-        image: "/img/ChewyWM.png",
-        price: "250",
-        color: "#E37AF1",
-    },
-    {
-        id: 15,
-        name: "Banana Melon",
-        image: "/img/Banana_Melon.png",
-        price: "250",
-        color: "#F0BF3C",
-    },
-];
 
 const Categoria = () => {
-    const { category } = useParams();
-    console.log(category);
+    const { subcategory } = useParams();
+    const { products, categories, setCategoryOrder, setInitialSubCategory } = useApp();
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    
+    useEffect(() => {
+        const filterProducts = () => {
+            setInitialSubCategory(subcategory);
+            setFilteredProducts(products?.find(product => product.category === subcategory)?.products); 
+            const mainCategory = categories?.filter(cat => cat.subcategories.map(subcat => subcat.name).includes(subcategory))[0]?.name;
+            setCategoryOrder(mainCategory);
+        };
+        filterProducts();
+    }, [products]);
+
     return (
         <>
             <HeaderCat />
@@ -135,14 +44,14 @@ const Categoria = () => {
                 </div>
 
                 <div className={styles.CatHeaddiv}>
-                    <h1>Categoria Elegida</h1>
+                    <h1>{subcategory}</h1>
                 </div>
                 <SearchBarCat />
-                <div className={styles.subtitle}>
+                {/* <div className={styles.subtitle}>
                     <h2>Vapes</h2>
-                </div>
+                </div> */}
                 <div className={styles.vapes}>
-                    {VAPES_WAKA.map(vape => (
+                    {filteredProducts?.map(vape => (
                         <VapeCard 
                             key={vape.id}
                             vape={vape}

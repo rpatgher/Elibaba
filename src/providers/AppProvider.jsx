@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
+import { useParams } from "react-router-dom";
+
 import clientAxios from '../config/clientAxios';
 import generateHash from '../helpers/generateHash.js';
 
@@ -8,12 +10,16 @@ import orderElements from "../helpers/orderElements.js";
 
 const AppContext = createContext();
 
+
 const AppProvider = ({ children }) => {
+    const [initialSubCategory, setInitialSubCategory] = useState('');
     const [elements, setElements] = useState([]);
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [categoryOrder, setCategoryOrder] = useState('');
 
+
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         // Get products from the server
@@ -26,7 +32,7 @@ const AppProvider = ({ children }) => {
                     'x-client-hash': `${hash}`,
                     'x-client-website': 'Shakalo Store',
                 }
-            }
+            };
             try {
                 const { data } = await clientAxios('/api/elibaba/elements', config);
                 setElements(data.elements);
@@ -40,10 +46,56 @@ const AppProvider = ({ children }) => {
         };
         return () => getVapes();
     }, []);
+    
 
     const changeCategory = (category) => {
         setCategoryOrder(category);
         setProducts(orderElements(elements, category));
+    }
+
+    const handleAddToCart = (product) => {
+        setCart([...cart, { ...product, amount: 1 }]);
+    };
+
+    const addItemAmount = (id) => {
+        const newCart = cart.map(item => {
+            if (item.id === id) {
+                return { ...item, amount: item.amount + 1 };
+            }
+            return item;
+        });
+        setCart(newCart);
+    }
+
+    const restItemAmount = (id) => {
+        const newCart = cart.map(item => {
+            if (item.id === id) {
+                if(item.amount === 1){
+                    return item;
+                }else{
+                    return { ...item, amount: item.amount - 1 };
+                }
+            }
+            return item;
+        });
+        setCart(newCart);
+    }
+
+    const removeItem = (id) => {
+        const newCart = cart.filter(item => item.id !== id);
+        setCart(newCart);
+    }
+
+    const changeItemAmount = (e, id) => {
+        const newCart = cart.map(item => {
+            if (item.id === id) {
+                if(!(isNaN(e.target.value) || e.target.value < 1)){
+                    return { ...item, amount: parseInt(e.target.value) };   
+                }
+            }
+            return item;
+        });
+        setCart(newCart);
     }
 
 
@@ -51,8 +103,16 @@ const AppProvider = ({ children }) => {
         <AppContext.Provider value={{
             products,
             categories,
-            changeCategory
-            
+            changeCategory,
+            categoryOrder,
+            setCategoryOrder,
+            setInitialSubCategory,
+            handleAddToCart,
+            cart,
+            addItemAmount,
+            restItemAmount,
+            removeItem,
+            changeItemAmount
         }}>
             {children}
         </AppContext.Provider>

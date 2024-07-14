@@ -30,6 +30,11 @@
 .subtitle h2{
     margin: 0;
 }
+.no-products{
+    text-align: center;
+    opacity: .5;
+    margin: 10rem 0;
+}
 .swiper-wrapper{
     padding: 0 7rem;
     width: calc(100% - 14rem);

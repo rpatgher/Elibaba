@@ -17,6 +17,11 @@
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.1s ease-in-out;
     transform: translateX(100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 .cartpanel.open {
     transform: translateX(0);
@@ -55,33 +60,36 @@
 .carritoitems {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
     margin: 1rem 0;
     padding: 0 1rem;
     position: relative;
+    overflow: scroll;
 }
 .finalcart {
     border-top: solid 1px #393838;
-    position: absolute;
-    bottom: 0px;
     margin: 15px;
     color: #000000;
 }
 .topfinalcart {
     display: flex;
+    justify-content: space-between;
     margin: 2rem 0;
 }
 .finalcartotal {
     font-size: 2.5rem;
 }
 .finalcarcosto {
-    position: fixed;
-    right: 20px;
     font-size: 2.5rem;
 }
 .finalcardesc {
     font-size: 15px;
     color: #393838;
     padding-bottom: 10px;
+}
+.finalcardesc p{
+    max-width: 40rem;
 }
 .completeorder {
     width: 100%;

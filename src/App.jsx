@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/login" element={<Login />}/>
             <Route path="/signup" element={<Signup />}/> 
-            <Route path="/categoria/:category" element={<Categoria />}/> 
+            <Route path="/categoria/:subcategory" element={<Categoria />}/> 
 
           </Routes>
         </BrowserRouter>

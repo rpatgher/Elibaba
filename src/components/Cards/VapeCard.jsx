@@ -14,11 +14,6 @@ const VapeCard = ({ vape }) => {
         setShowPopup(!showPopup);
     };
 
-    const handleAddToCart = (e) => {
-        e.stopPropagation();
-        alert("Producto agregado a carrito");
-    };
-
     return (
         <div
             className={styles.card}
@@ -62,7 +57,6 @@ const VapeCard = ({ vape }) => {
                     <Popup 
                         vape={vape} 
                         togglePopup={togglePopup} 
-                        handleAddToCart={handleAddToCart}
                     />
                 </PopupPortal>
             )}

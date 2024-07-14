@@ -131,6 +131,27 @@ p.tag{
 .addToCart button:hover {
     background-color: color-mix(in srgb, var(--green) 70%, #000);
 }
+.cantidad{
+    display: flex;
+    gap: .5rem;
+}
+.cantidad input {
+    width: 4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border: none;
+}
+.cantidad button{
+    border-radius: 3rem;
+    border: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
 .closeBtn button{
     font-size: 1.8rem;
     background-color: transparent;

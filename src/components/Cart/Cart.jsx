@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import styles from "./Cart.module.css";
 import CartItem from "./CartItem";
 
+// ************ Hooks ************
+import useApp from "../../hooks/useApp";
 
+import formatToMoney from "../../helpers/formatMoney.js";
 
 const Cart = ({cartOpen, setCartOpen}) => {
+    const { cart } = useApp();
     const [animation, setAnimation] = useState(false);
 
     useEffect(() => {
@@ -43,7 +47,16 @@ const Cart = ({cartOpen, setCartOpen}) => {
                 </div>
 
                 <div className={styles.carritoitems}>
-                    <CartItem />
+                    {cart.length > 0 ? cart.map((item) => (
+                        <CartItem
+                            key={item.id}
+                            vape={item}
+                        />
+                    )) : (
+                        <div className={styles.emptycart}>
+                            <p>No hay productos en el carrito</p>
+                        </div>
+                    )}
                 </div>
 
                 <div className={styles.finalcart}>
@@ -51,15 +64,17 @@ const Cart = ({cartOpen, setCartOpen}) => {
                         <div className={styles.finalcartotal}>
                             Total estimado
                         </div>
-                        <div className={styles.finalcarcosto}>$ 900.00 MXN</div>
+                        <div className={styles.finalcarcosto}>{formatToMoney(cart.reduce((acc, item) => acc + (item.amount * item.price), 0))} MXN</div>
                     </div>
                     <div className={styles.finalcardesc}>
-                        Al completar tu compra, estás de acuerdo con nuestros
-                        Términos y Condiciones y Política de Privacidad. Todos
-                        los productos son revisados antes del envío para
-                        garantizar la máxima calidad. Tu información personal es
-                        segura con nosotros y se utilizará únicamente para
-                        procesar tu pedido y mejorar tu experiencia de compra.{" "}
+                        <p>
+                            Al completar tu compra, estás de acuerdo con nuestros
+                            Términos y Condiciones y Política de Privacidad. Todos
+                            los productos son revisados antes del envío para
+                            garantizar la máxima calidad. Tu información personal es
+                            segura con nosotros y se utilizará únicamente para
+                            procesar tu pedido y mejorar tu experiencia de compra.
+                        </p>
                     </div>
                     <div>
                         <button className={styles.completeorder}>
