@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // ************ Components ************
-import HeaderCat from "../../components/HeaderCat/HeaderCat";
-import VapeCard from "../../components/Cards/VapeCard";
-import SearchBarCat from "../../components/SearchBarCat/SearchBarCat";
-import Footer from "../../components/Footer/Footer";
+import HeaderCat from "../../components/HeaderCat/HeaderCat.jsx";
+import VapeCard from "../../components/Cards/VapeCard.jsx";
+import SearchBarCat from "../../components/SearchBarCat/SearchBarCat.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 
 // ************ Styles ************
 import styles from "./Categoria.module.css";
 
 // ************ Hooks ************
-import useApp from "../../hooks/useApp";
+import useApp from "../../hooks/useApp.jsx";
 
 // ************ Helpers ************
 import orderElements from "../../helpers/orderElements.js";
