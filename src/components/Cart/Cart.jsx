@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Cart.module.css";
-import CartItem from "./CartItem";
+import CartItem from "./CartItem.jsx";
 
 // ************ Hooks ************
 import useApp from "../../hooks/useApp";
