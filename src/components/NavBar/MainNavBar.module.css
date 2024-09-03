@@ -29,4 +29,5 @@
 .cartIcon, .actions a{
     all: unset;
     cursor: pointer;
+    margin: 1rem;
 }
