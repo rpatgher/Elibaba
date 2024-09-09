@@ -21,6 +21,7 @@ const MainNavBar = () => {
                     >
                         <i className={`fa-solid fa-cart-shopping`}></i>
                     </button>
+                    
                     <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                 </div>
             </div>
