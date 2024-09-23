@@ -25,6 +25,7 @@ const Home = () => {
             <div className="body">
                 <div className='container'>
                     <SearchBar />
+                    <Link to="/template">Templates</Link>
                     {products.length > 0 ? (
                         products.map((element, index) => (
                             <Fragment

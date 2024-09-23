@@ -6,6 +6,8 @@ import Login from "./pages/Login/login"
 import Signup from "./pages/Signup/signup"
 import Categoria from "./pages/Categoria/Categoria";
 
+import Template from "./Templates/Template";
+
 // ***************** Providers *****************
 import { AppProvider } from './providers/AppProvider';
 
@@ -20,6 +22,7 @@ function App() {
             <Route path="/login" element={<Login />}/>
             <Route path="/signup" element={<Signup />}/> 
             <Route path="/categoria/:subcategory" element={<Categoria />}/> 
+            <Route path="/template" element={<Template />}/>
 
           </Routes>
         </BrowserRouter>
