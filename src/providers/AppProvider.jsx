@@ -3,9 +3,10 @@ import { createContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import clientAxios from '../config/clientAxios';
-import generateHash from '../helpers/generateHash.js';
 
 // ************ Helpers ************
+import generateHash from '../helpers/generateHash.js';
+import encryptWord from '../helpers/encryptWord.js';
 import orderElements from "../helpers/orderElements.js";
 
 const AppContext = createContext();
@@ -25,16 +26,17 @@ const AppProvider = ({ children }) => {
         // Get products from the server
         const getVapes = async () => {
             const hash = generateHash();
+            const encryptedName = encryptWord(import.meta.env.VITE_WEBSITE_NAME);
             const config = {
                 headers: {
                     "Content-Type": "application/json",
-                    'x-client-api-key': import.meta.env.VITE_API_KEY,
                     'x-client-hash': `${hash}`,
-                    'x-client-website': 'Shakalo Store',
+                    'x-client-website': `${encryptedName}`,
                 }
             };
             try {
                 const { data } = await clientAxios('/api/elibaba/elements', config);
+                console.log(data);
                 setElements(data.elements);
                 setCategories(data.categories);
                 setCategoryOrder(data.elements[0].categories[0].category);
